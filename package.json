@@ -44,7 +44,6 @@
     "react-dom": "^16.5.2",
     "react-transition-group": "^2.5.0",
     "resolve": "1.8.1",
-    "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "1.1.1",
@@ -72,11 +71,15 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.11",
-    "@storybook/addon-knobs": "^3.4.11",
-    "@storybook/addon-links": "^3.4.11",
-    "@storybook/addons": "^3.4.11",
-    "@storybook/react": "^3.4.11",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-syntax-export-default-from": "^7.0.0",
+    "@storybook/addon-actions": "^4.0.0-alpha.21",
+    "@storybook/addon-knobs": "^4.0.0-alpha.21",
+    "@storybook/addon-links": "^4.0.0-alpha.21",
+    "@storybook/addon-storysource": "^3.4.11",
+    "@storybook/addons": "^4.0.0-alpha.21",
+    "@storybook/react": "^4.0.0-alpha.21",
+    "@storybook/storybook-deployer": "^2.3.0",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "node-sass": "^4.9.3",
@@ -121,6 +124,9 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-export-default-from"
     ]
   }
 }

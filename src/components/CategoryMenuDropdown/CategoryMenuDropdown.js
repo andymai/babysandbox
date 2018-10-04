@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { CSSTransition } from 'react-transition-group'
 import './CategoryMenuDropdown.sass'
-import CategoryMenuContainer from './CategoryMenuContainer'
+import CategoryMenuContainer from '../CategoryMenuContainer'
 
 export default class CategoryMenuDropdown extends React.Component {
   constructor(props) {
@@ -19,8 +19,6 @@ export default class CategoryMenuDropdown extends React.Component {
   }
 
   render() {
-    const areas = ['Living Room', 'Kitchen', 'Bath', 'Nursery', 'Car']
-
     return (
       <div>
         <div className='CategoryMenuDropdown' onClick={this.toggleMenu}>
@@ -34,10 +32,9 @@ export default class CategoryMenuDropdown extends React.Component {
           timeout={300}
           in={this.state.isOpen}
           >
-          <CategoryMenuContainer areas={areas} isOpen={this.state.isOpen}/>
+          <CategoryMenuContainer isOpen={this.state.isOpen}/>
         </CSSTransition>
       </div>
     )
   }
 }
-

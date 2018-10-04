@@ -18,4 +18,3 @@ CategoryMenuItem.propTypes = {
 }
 
 export default CategoryMenuItem
-

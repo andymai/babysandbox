@@ -1,18 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CategoryMenuItem from './CategoryMenuItem'
+import CategoryMenuItem from '../CategoryMenuItem'
 import './CategoryMenuContainer.sass'
 
 const CategoryMenuContainer = (props) => {
 
-  const areas =props.areas.map((item, index) => {
+  const areas = ['Living Room', 'Kitchen', 'Bath', 'Nursery', 'Car']
+
+  const areasList = areas.map((item, index) => {
     return <li key={index} onClick={props.onClick}>{item}</li>
   })
 
   return (
-    <div className='CategoryMenu__container' style={props.isOpen ? {visibility: 'visible'} : null }>
+    <div className='CategoryMenu__container' style={props.isVisible ? {visibility: 'visible'} : null }>
       <ul className='CategoryMenu__areas'>
-        {areas}
+        {areasList}
       </ul>
       <div className='CategoryMenu__items'>
         <CategoryMenuItem label='Strollers'/>
@@ -40,4 +42,3 @@ CategoryMenuContainer.propTypes = {
 }
 
 export default CategoryMenuContainer
-
