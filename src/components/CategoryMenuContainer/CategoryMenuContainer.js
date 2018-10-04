@@ -38,7 +38,7 @@ const CategoryMenuContainer = (props) => {
 }
 
 CategoryMenuContainer.propTypes = {
-  areas: PropTypes.array.isRequired
+  
 }
 
 export default CategoryMenuContainer

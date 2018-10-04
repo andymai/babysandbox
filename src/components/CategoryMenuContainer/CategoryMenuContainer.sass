@@ -49,21 +49,22 @@
 
 /** Animations **/
 .CategoryMenuContainer-enter 
-  opacity: 0.01
+  opacity: 0
   visibility: hidden
-  transform: translateY(-2em);
+  transform: translateY(-2em)
 
 .CategoryMenuContainer-enter-done 
   opacity: 1
   visibility: visible
-  transition: all 0.3s
+  transition: all 266ms ease-out
+  transition-property: opacity, transform
 
 .CategoryMenuContainer-exit 
   opacity: 1
   visibility: visible
 
 .CategoryMenuContainer-exit-done
-  opacity: 0.01
+  opacity: 0
   visibility: hidden
   transform: translateY(-2em)
-  transition: all 0.3s
+  transition: all 200ms linear

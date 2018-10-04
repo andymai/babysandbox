@@ -29,7 +29,10 @@ export default class CategoryMenuDropdown extends React.Component {
         </div>
         <CSSTransition
           classNames="CategoryMenuContainer"
-          timeout={300}
+          timeout={{
+            enter: 0,
+            exit: 0
+          }}
           in={this.state.isOpen}
           >
           <CategoryMenuContainer isOpen={this.state.isOpen}/>
