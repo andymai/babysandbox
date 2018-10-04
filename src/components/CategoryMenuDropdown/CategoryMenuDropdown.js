@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { CSSTransition } from 'react-transition-group'
 import './CategoryMenuDropdown.sass'
 import CategoryMenuContainer from '../CategoryMenuContainer'
+import CategoryMenuContainerWithMotion from '../CategoryMenuContainerWithMotion/CategoryMenuContainerWithMotion';
 
 export default class CategoryMenuDropdown extends React.Component {
   constructor(props) {
@@ -24,19 +24,10 @@ export default class CategoryMenuDropdown extends React.Component {
         <div className='CategoryMenuDropdown' onClick={this.toggleMenu}>
           {this.props.label}
           <svg className='chevron-down' xmlns="http://www.w3.org/2000/svg" width="9" height="6"   viewBox="0 0 9 6">
-            <polyline fill="none" points="119.769 15.097 123.8 19.128 128 15.097"   transform="translate(-119 -14)"/>
+            <polyline fill="none" points="119.769 15.097 123.8 19.128 128 15.097" transform="translate(-119 -14)"/>
           </svg>
         </div>
-        <CSSTransition
-          classNames="CategoryMenuContainer"
-          timeout={{
-            enter: 0,
-            exit: 0
-          }}
-          in={this.state.isOpen}
-          >
-          <CategoryMenuContainer isOpen={this.state.isOpen}/>
-        </CSSTransition>
+        { this.props.withMotion ? <CategoryMenuContainerWithMotion springParams={this.props.springParams} isOpen={this.state.isOpen}/> : <CategoryMenuContainer isOpen={this.state.isOpen}/> }
       </div>
     )
   }

@@ -4,5 +4,5 @@ import { storiesOf } from '@storybook/react';
 import CategoryMenuContainer from '../CategoryMenuContainer'
 
 storiesOf('CategoryMenuContainer', module)
-  .add('Container', () => <CategoryMenuContainer isVisible={true} />)
+  .add('Container', () => <CategoryMenuContainer isOpen={true} />)
 

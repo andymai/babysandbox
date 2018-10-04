@@ -1,5 +1,4 @@
-.CategoryMenu__container
-  visibility: hidden
+.CategoryMenu__container__withMotion
   position: relative
   top: 8px
   background: #ffffff
@@ -48,27 +47,3 @@
       border-top: 1px solid #E4E8E8
       position: static
       width: auto
-
-/** Animations **/
-.CategoryMenu__container-enter 
-  opacity: 0
-  visibility: hidden
-  transform: translateY(-2em)
-
-.CategoryMenu__container-enter-done 
-  opacity: 1
-  visibility: visible
-  transition: all 266ms ease-out
-  transition-property: opacity, transform
-
-.CategoryMenu__container-exit 
-  opacity: 1
-  visibility: visible
-
-.CategoryMenu__container-exit-done
-  opacity: 0
-  visibility: hidden
-  z-index: -1
-  transform: translateY(-2em)
-  transition: all 200ms linear
-  transition-property: opacity, transform, visibility
