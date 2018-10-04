@@ -13,9 +13,9 @@ export default class CategoryMenuDropdown extends React.Component {
     this.toggleMenu = this.toggleMenu.bind(this)
   }
   toggleMenu() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    })
+    this.setState(prevState => ({
+      isOpen: !prevState.isOpen
+    }));
   }
 
   render() {
