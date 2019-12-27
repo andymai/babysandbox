@@ -1,0 +1,38 @@
+.CategoryMenuItem
+  display: flex
+  flex-grow: 1
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: calc(100% * (1/5) - 10px)
+  border-bottom: 1px solid #E4E8E8
+  border-right: 1px solid #E4E8E8
+  cursor: pointer
+  transform: matrix(1, 0, 0, 1, 0, 0)
+  background: #fff
+  transition-duration: 0.2s, 0.2s
+  transition-property: transform, -webkit-transform
+  user-select: none
+  @media (max-width: 800px)
+    width: calc(100% / 2 - 10px)
+  &:hover
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0)
+    z-index: 1000
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18)
+    border-color: transparent
+    .CategoryMenuItem__label
+      color: #F95D62
+    .CategoryMenuItem__icon
+      fill: #F95D62
+
+.CategoryMenuItem__icon
+  fill: #E4E8E8
+  margin: 16px 0 0 0
+
+.CategoryMenuItem__label
+  display: block
+  font: normal 12px "Proxima Nova", "Helvetica", sans-serif
+  text-transform: uppercase
+  color: #788484
+  margin: 12px 0 16px
+  letter-spacing: 0.2px
